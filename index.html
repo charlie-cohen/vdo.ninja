@@ -461,7 +461,7 @@
 							</tr>
 							<tr>
 								<th style="text-align:right; padding: 5px; vertical-align: top;">
-									<input id="useSSOForRoom" type="checkbox" onchange="toggleSSOOptions(this.checked)" title="Use SSO to manage access for this room. You will be asked to sign in.">
+									<input id="useSSOForRoom" type="checkbox" autocomplete="off" onchange="toggleSSOOptions(this.checked)" title="Use SSO to manage access for this room. You will be asked to sign in.">
 								</th>
 								<th style="text-align:left;">
 									<b>
@@ -491,7 +491,7 @@
 									</tr>
 									<tr>
 										<th style="text-align:right; padding: 5px;">
-											<input id="requireApprovalForRoom" type="checkbox" title="Require the director to approve guests before they can join this room.">
+											<input id="requireApprovalForRoom" type="checkbox" autocomplete="off" title="Require the director to approve guests before they can join this room.">
 										</th>
 										<th style="text-align:left;">
 											<b>
@@ -2891,8 +2891,8 @@
 				<span></span>
 				<h3 data-translate="buffer-settings">Buffer Settings</h3><br />
 				<div>
-					<span data-translate="change-playout-buffer">Buffer (ms): </span><input data-buffer-value='0' style='margin-left: 3px;padding: 2px;width: 60px;' type='number' min='0' max='180000' /><br />
-					<input type='range' min='0' max='180000' data-buffer-value='0' /><br />
+					<span data-translate="change-playout-buffer" title="Local to this browser and selected remote stream. Normal WebRTC buffering is browser-limited; chunked mode uses a separate buffer.">Buffer (ms): </span><input data-buffer-value='0' title="Local to this browser and selected remote stream. Normal WebRTC buffering is browser-limited; chunked mode uses a separate buffer." style='margin-left: 3px;padding: 2px;width: 60px;' type='number' min='0' max='180000' /><br />
+					<input type='range' min='0' max='180000' data-buffer-value='0' title="Local to this browser and selected remote stream. Normal WebRTC buffering is browser-limited; chunked mode uses a separate buffer." /><br />
 				</div>
 			</div>
 		</div>
@@ -3186,25 +3186,25 @@
 			<br />
 			<ul id="languagesList" style="list-style-type: none; margin: 0;">
 				<li><a onclick="changeLg('en',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;">English</a></li>
-				<li><a onclick="changeLg('de',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Berlin">German</a></li>
-				<li><a onclick="changeLg('fr',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Paris">French</a></li>
-				<li><a onclick="changeLg('it',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Rome">Italian</a></li>
-				<li><a onclick="changeLg('es',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Madrid">Spanish</a></li>
-				<li><a onclick="changeLg('pl',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Warsaw">Polish</a></li>
-				<li><a onclick="changeLg('pt',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Lisbon;">Portuguese (Europe)</a></li>
-				<li><a onclick="changeLg('pt-br',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="America/Araguaina">Portuguese (Brazil)</a></li>
-				<li><a onclick="changeLg('nl',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Amsterdam">Dutch</a></li>
-				<li><a onclick="changeLg('tr',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Istanbul">Turkish</a></li>
-				<li><a onclick="changeLg('ja',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/Tokyo">Japanese</a></li>
-				<li><a onclick="changeLg('ar', true, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-rtl="true" data-tz="Asia/Arabic">Arabic</a></li>
-				<li><a onclick="changeLg('cn',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/China">Chinese (中文)</a></li>
-				<li><a onclick="changeLg('cs',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Prague">Czech</a></li>
-				<li><a onclick="changeLg('ru',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Moscow">Russian</a></li>
-				<li><a onclick="changeLg('uk',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Ukraine">Ukrainian</a></li>
-				<li><a onclick="changeLg('eu',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Euskara">Basque</a></li>
-				<li><a onclick="changeLg('kr',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/Korea">Korean</a></li>
-				<li><a onclick="changeLg('pig',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;">Pig Latin</a></li>
-				<li><a onclick="changeLg('hi',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/India">Hindi</a></li>
+				<li><a onclick="changeLg('de',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Berlin">Deutsch</a></li>
+				<li><a onclick="changeLg('fr',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Paris">français</a></li>
+				<li><a onclick="changeLg('it',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Rome">italiano</a></li>
+				<li><a onclick="changeLg('es',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Madrid">español - España</a></li>
+				<li><a onclick="changeLg('pl',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Warsaw">polski</a></li>
+				<li><a onclick="changeLg('pt',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Lisbon;">português do Portugal</a></li>
+				<li><a onclick="changeLg('pt-br',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="America/Araguaina">português do Brasil</a></li>
+				<li><a onclick="changeLg('nl',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Amsterdam">Nederlands</a></li>
+				<li><a onclick="changeLg('tr',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Istanbul">Türkçe</a></li>
+				<li><a onclick="changeLg('ja',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/Tokyo">日本語</a></li>
+				<li><a onclick="changeLg('ar', true, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-rtl="true" data-tz="Asia/Arabic">العربية</a></li>
+				<li><a onclick="changeLg('cn',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/China">简体中文 (中国大陆)</a></li>
+				<li><a onclick="changeLg('cs',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Prague">čeština</a></li>
+				<li><a onclick="changeLg('ru',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Moscow">русский</a></li>
+				<li><a onclick="changeLg('uk',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Ukraine">українська</a></li>
+				<li><a onclick="changeLg('eu',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Euskara">euskara</a></li>
+				<li><a onclick="changeLg('kr',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/Korea">한국어</a></li>
+				<li><a onclick="changeLg('pig',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;">Igpay Atinlay</a></li>
+				<li><a onclick="changeLg('hi',false, true);toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Asia/India">हिन्दी</a></li>
 			</ul>
 			<span style="display:block;height:0;width:0;padding:0;margin:0;"></span>
 			<i class="las la-exclamation-circle"></i><a href="https://github.com/steveseguin/vdoninja/tree/master/translations" target="_blank" rel="noopener noreferrer" data-translate='add-more-here'>Add More Here!</a>
@@ -3384,7 +3384,7 @@
 		</script>
 		
 		<!-- Authentication client -->
-		<script type="text/javascript" crossorigin="anonymous" src="./auth-client.js?v=3"></script>
+		<script type="text/javascript" crossorigin="anonymous" src="./auth-client.js?v=7"></script>
 
 				<script type="text/javascript">
 					function toggleSSOOptions(enabled){
@@ -3419,6 +3419,12 @@
 					(function initSSOOptionsState(){
 						var ssoToggle = document.getElementById('useSSOForRoom');
 						if (ssoToggle) {
+							try {
+								var params = new URLSearchParams(window.location.search);
+								ssoToggle.checked = params.has('auth') || params.has('requireauth');
+							} catch (e) {
+								ssoToggle.checked = false;
+							}
 							toggleSSOOptions(!!ssoToggle.checked);
 						}
 					})();
@@ -3431,7 +3437,7 @@
 					})();
 				</script>
 
-		<script type="text/javascript" crossorigin="anonymous" id="lib-js" src="./lib.js?ver=1413"></script>
+		<script type="text/javascript" crossorigin="anonymous" id="lib-js" src="./lib.js?ver=1415"></script>
 		<script type="text/javascript" crossorigin="anonymous" id="main-js" src="./main.js?ver=1063"></script>
 		<script type="module" src="./podcast/bootstrap.js"></script>
 		
